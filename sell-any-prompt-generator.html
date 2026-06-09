@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sell-Any-Prompt Generator — 100,000 AI Prompts That Print Money (MRR)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#111111;--accent:#C9A84C;--card:#1A1A1A;--text:#FFFFFF;--muted:#888888;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--primary);color:var(--text);font-family:'Nunito',sans-serif;line-height:1.6;}
+.topbar{height:4px;background:var(--accent);}
+.wrap{max-width:880px;margin:0 auto;padding:44px 24px 90px;}
+header{text-align:center;margin-bottom:26px;}
+h1{font-family:'Playfair Display',serif;font-size:34px;font-weight:900;margin-bottom:10px;}
+.sub{color:var(--muted);font-style:italic;font-size:15px;}
+.tag{display:inline-block;background:rgba(201,168,76,.12);color:var(--accent);border:1px solid var(--accent);border-radius:20px;padding:4px 14px;font-size:13px;font-weight:700;margin-bottom:16px;}
+.howto{background:rgba(201,168,76,.06);border-left:3px solid var(--accent);border-radius:8px;padding:16px 18px;color:#ddd;font-size:14px;margin-bottom:22px;}
+.form{background:var(--card);border:1px solid #262626;border-radius:14px;padding:22px 24px;margin-bottom:24px;}
+.form label{display:block;color:var(--accent);font-weight:700;font-size:13px;margin:14px 0 6px;}
+.form label:first-child{margin-top:0;}
+.form textarea,.form input,.form select{width:100%;background:#0e0e0e;border:1px solid #333;border-radius:8px;color:#fff;font-family:'Nunito',sans-serif;font-size:14px;padding:11px 13px;}
+.form textarea{min-height:96px;resize:vertical;}
+.row{display:flex;gap:14px;flex-wrap:wrap;}
+.row>div{flex:1;min-width:200px;}
+.genbtn{display:block;width:100%;margin-top:20px;background:var(--accent);color:#111;border:none;border-radius:10px;padding:14px;font-family:'Playfair Display',serif;font-weight:700;font-size:18px;cursor:pointer;}
+.genbtn:hover{opacity:.9;}
+.hint{color:var(--muted);font-size:12px;margin-top:4px;}
+#out{display:none;}
+.section-title{font-family:'Playfair Display',serif;font-size:24px;margin:30px 0 12px;color:var(--accent);border-bottom:1px solid #2a2a2a;padding-bottom:9px;}
+.copyblock{background:var(--card);border-radius:12px;border:1px solid #262626;margin-bottom:14px;overflow:hidden;}
+.copyblock .label{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;background:#141414;border-bottom:1px solid #262626;}
+.copyblock .label span{color:var(--accent);font-weight:700;font-size:13px;}
+.copybtn{background:var(--accent);color:#111;border:none;border-radius:6px;padding:6px 14px;font-family:'Nunito',sans-serif;font-weight:700;font-size:12px;cursor:pointer;}
+.copybtn:hover{opacity:.85;}
+.copybody{padding:16px 18px;white-space:pre-wrap;color:#e8e8e8;font-size:14.5px;}
+.price-big{text-align:center;font-family:'Playfair Display',serif;font-size:30px;color:var(--accent);padding:6px 0;}
+footer{text-align:center;border-top:1px solid var(--accent);margin-top:50px;padding-top:26px;}
+footer .brand{font-family:'Playfair Display',serif;color:var(--accent);font-size:20px;}
+footer .small{color:var(--muted);font-size:13px;margin-top:6px;}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<div class="wrap">
+<header>
+<div class="tag">MRR BONUS TOOL · SELL PROMPTS INDIVIDUALLY</div>
+<h1>Sell-Any-Prompt Generator</h1>
+<p class="sub">Turn any single prompt into a ready-to-post product listing — in seconds</p>
+</header>
+
+<div class="howto">
+<strong>What this is:</strong> Your Master Resell Rights licence lets you sell prompts <em>one at a time</em> or in small bundles — not just the whole vault. Paste any prompt below, add a couple of details, and this builds a complete listing you can post on Etsy, Gumroad, Beacons, Stan, Payhip or your own store. Everything generates on this page — nothing is sent anywhere, works offline.
+</div>
+
+<div class="form">
+<label>1. Paste the prompt you want to sell</label>
+<textarea id="prompt" placeholder="Paste one prompt from your vault here…"></textarea>
+<div class="hint">Tip: open your vault, click a category, copy any prompt, and paste it here.</div>
+
+<div class="row">
+<div>
+<label>2. What does this prompt help them DO? (the outcome)</label>
+<input id="outcome" type="text" placeholder="e.g. write a week of Instagram captions">
+</div>
+<div>
+<label>3. Who is it for? (audience / niche)</label>
+<input id="audience" type="text" placeholder="e.g. coaches, Etsy sellers, busy mums">
+</div>
+</div>
+
+<div class="row">
+<div>
+<label>4. Category / theme</label>
+<input id="category" type="text" placeholder="e.g. Email Marketing, Content, Sales">
+</div>
+<div>
+<label>5. What are you selling?</label>
+<select id="kind">
+<option value="single">A single prompt</option>
+<option value="small">A small bundle (5–20 prompts)</option>
+<option value="pack">A themed pack (20–100 prompts)</option>
+</select>
+</div>
+</div>
+
+<div class="row">
+<div>
+<label>6. Where will you sell it?</label>
+<select id="platform">
+<option value="etsy">Etsy</option>
+<option value="gumroad">Gumroad</option>
+<option value="beacons">Beacons</option>
+<option value="payhip">Payhip / Stan</option>
+<option value="own">My own store / Instagram</option>
+</select>
+</div>
+<div>
+<label>7. Your brand / shop name</label>
+<input id="brand" type="text" placeholder="e.g. GetPaidToBeYouOnline">
+</div>
+</div>
+
+<button class="genbtn" onclick="generate()">✨ Generate my listing</button>
+</div>
+
+<div id="out"></div>
+
+<footer>
+<div class="brand">GetPaidToBeYouOnline</div>
+<div class="small">100,000 AI Prompts That Print Money — MRR Sell-Any-Prompt Generator</div>
+</footer>
+</div>
+
+<script>
+function esc(s){return (s||'').trim();}
+function cap(s){s=esc(s);return s? s.charAt(0).toUpperCase()+s.slice(1):s;}
+function titleCase(s){return esc(s).replace(/\w\S*/g,function(t){return t.charAt(0).toUpperCase()+t.slice(1).toLowerCase();});}
+
+function block(label,body){
+  return '<div class="copyblock"><div class="label"><span>'+label+'</span>'+
+         '<button class="copybtn" onclick="copyMe(this)">Copy</button></div>'+
+         '<div class="copybody">'+body.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</div></div>';
+}
+
+function copyMe(btn){
+  var body=btn.closest('.copyblock').querySelector('.copybody').innerText;
+  navigator.clipboard.writeText(body).then(function(){
+    var old=btn.textContent;btn.textContent='✓ Copied';
+    setTimeout(function(){btn.textContent=old;},1800);
+  });
+}
+
+function generate(){
+  var prompt=esc(document.getElementById('prompt').value);
+  var outcome=esc(document.getElementById('outcome').value)||'get a specific result from AI without staring at a blank screen';
+  var audience=esc(document.getElementById('audience').value)||'online entrepreneurs';
+  var category=esc(document.getElementById('category').value)||'AI Prompts';
+  var kind=document.getElementById('kind').value;
+  var platform=document.getElementById('platform').value;
+  var brand=esc(document.getElementById('brand').value)||'My Shop';
+
+  if(!prompt){alert('Paste a prompt first 🙂');return;}
+
+  var thing = kind==='single' ? 'AI Prompt' : (kind==='small' ? 'AI Prompt Mini-Bundle' : 'AI Prompt Pack');
+  var qtyword = kind==='single' ? 'this done-for-you prompt' : 'these done-for-you prompts';
+  var oc = outcome.charAt(0).toLowerCase()+outcome.slice(1);
+
+  // ---- TITLES ----
+  var titles =
+    titleCase(outcome)+' — '+thing+' for ChatGPT, Claude & Gemini\n'+
+    'Done-For-You AI Prompt to '+oc+' ('+titleCase(category)+')\n'+
+    'The '+titleCase(category)+' AI Prompt '+(audience?('for '+titleCase(audience)):'')+' — Copy, Paste, Done';
+
+  // ---- DESCRIPTION ----
+  var desc =
+'Stop staring at a blank AI screen.\n\n'+
+'This is a ready-to-use '+thing.toLowerCase()+' that helps '+audience+' '+oc+' — in minutes, not hours. Just copy it, paste it into ChatGPT, Claude, Gemini or any AI tool, swap in your details, and go.\n\n'+
+'No "prompt engineering" to learn. No guessing what to type. You get '+qtyword+' that already works.\n\n'+
+'WHAT YOU GET:\n'+
+'• A professionally written '+category+' prompt, ready to paste\n'+
+'• Works with ChatGPT, Claude, Gemini and any AI tool\n'+
+'• Fill-in-the-blank brackets so it fits your business\n'+
+'• Instant digital download — use it today\n\n'+
+'PERFECT FOR: '+titleCase(audience)+' who want results from AI without the overwhelm.';
+
+  // ---- BENEFITS ----
+  var benefits =
+'✓ '+cap(oc)+' in minutes, not hours\n'+
+'✓ No tech skills or prompt-writing needed — copy, paste, done\n'+
+'✓ Works in ChatGPT, Claude, Gemini & any AI tool\n'+
+'✓ Fill-in-the-blank brackets make it yours\n'+
+'✓ Instant download — start using it right now';
+
+  // ---- TAGS / SEO ----
+  var base=['ai prompts','chatgpt prompts','claude prompts',category.toLowerCase()+' prompts',
+            'ai for '+audience.toLowerCase(),'digital download','done for you',
+            'small business ai','content prompts','ai templates','copy paste prompts','marketing prompts'];
+  var tags=base.slice(0,13).join(', ');
+
+  // ---- PRICE ----
+  var priceMap={single:'$3 – $7',small:'$9 – $17',pack:'$19 – $39'};
+  var priceNote={single:'Single prompts sell fast as impulse buys. Price low, sell volume, and use it to upsell your full vault.',
+                 small:'A focused 5–20 prompt bundle is an easy yes. Bundle by one outcome so the value is obvious.',
+                 pack:'A themed pack of 20–100 prompts is a real mini-product. Anchor it against a smaller single-prompt offer to make the pack look like a deal.'};
+  var price='<div class="price-big">'+priceMap[kind]+' USD</div>\n'+priceNote[kind]+
+            '\n\nTIP: Sell at any price you like — but never give prompts away free. To earn more, upsell buyers from a single prompt to a larger themed bundle.';
+
+  // ---- DELIVERY ----
+  var delivery=
+'HOW TO DELIVER IT:\n'+
+'1. Paste the prompt(s) into a clean Google Doc, Google Sheet, or a simple PDF (add your '+brand+' logo at the top).\n'+
+'2. Title it with the outcome ("'+titleCase(outcome)+' Prompt").\n'+
+'3. Add one line of instructions: "Paste into ChatGPT, Claude or any AI tool. Replace the [brackets] with your details."\n'+
+'4. Upload that file as the digital download on your platform.\n'+
+'5. (Optional) Add a PS linking to your full vault for the upsell.';
+
+  // ---- PLATFORM TIP ----
+  var ptips={
+    etsy:'ETSY: Use all 13 tags above. Put the main keyword first in your title. Add 3–5 mock-up images (a branded cover + a "what’s inside" preview). Mark it a digital download for instant delivery.',
+    gumroad:'GUMROAD: Use the title + description as-is. Set it as a digital product with instant download. Turn on "pay what you want" with a minimum (never $0). Add a bigger bundle as a Gumroad upsell.',
+    beacons:'BEACONS: Add it as a Digital Product on your Beacons store. Use the short title, paste the description, set the price, upload the file. Pin it to the top of your link-in-bio.',
+    payhip:'PAYHIP / STAN: Create a digital download product, paste the description, set the price. Both support instant delivery and coupon codes — run a launch discount to get first reviews.',
+    own:'YOUR OWN STORE / INSTAGRAM: Post the promo caption below, then sell via DM or a checkout link. "Comment PROMPT and I’ll send the link" works great for single prompts.'
+  };
+
+  // ---- PROMO CAPTION ----
+  var promo=
+'POV: you needed to '+oc+' and didn’t know what to type into AI. 🙄\n\n'+
+'So I made you '+qtyword+'.\n\n'+
+'Copy it. Paste it into ChatGPT, Claude or any AI tool. Fill in the blanks. Done. ✨\n\n'+
+'No tech skills. No overwhelm. Just the words that work.\n\n'+
+'Grab it for '+priceMap[kind].split(' ')[0]+' 👇 (link in bio)\n'+
+'— '+brand;
+
+  var html=
+    '<div class="section-title">Your listing is ready 🎉</div>'+
+    '<p style="color:#bbb;font-size:14px;margin-bottom:18px;">Copy each block straight onto your sales page. Tweak anything to sound more like you.</p>'+
+    block('Product Title (3 options — pick one)', titles)+
+    block('Product Description', desc)+
+    block('Key Benefits (bullets)', benefits)+
+    block('SEO Tags / Keywords', tags)+
+    block('Suggested Price', price)+
+    block('How To Deliver It', delivery)+
+    block('Platform Tip ('+platform+')', ptips[platform])+
+    block('Promo Caption (post to sell it)', promo);
+
+  var out=document.getElementById('out');
+  out.innerHTML=html;
+  out.style.display='block';
+  out.scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>
